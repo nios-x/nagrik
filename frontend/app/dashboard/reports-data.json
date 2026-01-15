@@ -1,0 +1,82 @@
+[
+  {
+    "id": "RPT-2024-001",
+    "keyword": "Fire",
+    "category": "Fire",
+    "description": "Large warehouse fire on 5th Street",
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "severity": "high",
+    "createdAt": "2024-01-13T14:32:00Z"
+  },
+  {
+    "id": "RPT-2024-002",
+    "keyword": "Medical Emergency",
+    "category": "Medical",
+    "description": "Cardiac arrest at shopping mall",
+    "latitude": 40.758,
+    "longitude": -73.9855,
+    "severity": "high",
+    "createdAt": "2024-01-13T14:28:00Z"
+  },
+  {
+    "id": "RPT-2024-003",
+    "keyword": "Traffic Accident",
+    "category": "Accident",
+    "description": "Multi-vehicle collision on Highway 101",
+    "latitude": 40.7489,
+    "longitude": -73.968,
+    "severity": "medium",
+    "createdAt": "2024-01-13T14:15:00Z"
+  },
+  {
+    "id": "RPT-2024-004",
+    "keyword": "Robbery",
+    "category": "Crime",
+    "description": "Armed robbery at convenience store",
+    "latitude": 40.7614,
+    "longitude": -73.9776,
+    "severity": "high",
+    "createdAt": "2024-01-13T14:05:00Z"
+  },
+  {
+    "id": "RPT-2024-005",
+    "keyword": "Assault",
+    "category": "Crime",
+    "description": "Physical altercation in public area",
+    "latitude": 40.7505,
+    "longitude": -73.9934,
+    "severity": "medium",
+    "createdAt": "2024-01-13T13:52:00Z"
+  },
+  {
+    "id": "RPT-2024-006",
+    "keyword": "Medical Call",
+    "category": "Medical",
+    "description": "Chest pain complaint at office building",
+    "latitude": 40.7549,
+    "longitude": -73.984,
+    "severity": "low",
+    "createdAt": "2024-01-13T13:40:00Z"
+  },
+  {
+    "id": "RPT-2024-007",
+    "keyword": "Building Fire",
+    "category": "Fire",
+    "description": "Small residential fire contained",
+    "latitude": 40.7282,
+    "longitude": -73.7949,
+    "severity": "medium",
+    "createdAt": "2024-01-13T13:25:00Z"
+  },
+  {
+    "id": "RPT-2024-008",
+    "keyword": "Hit and Run",
+    "category": "Accident",
+    "description": "Hit and run incident with injuries",
+    "latitude": 40.7614,
+    "longitude": -73.9776,
+    "severity": "high",
+    "createdAt": "2024-01-13T13:10:00Z"
+  }
+]

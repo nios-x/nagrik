@@ -1,0 +1,88 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" // recommended
+  url      = env("DATABASE_URL")
+}
+
+model Report {
+  id String @id @default(cuid())
+
+  // Voice detection
+  keyword     String
+  description String
+
+  // Categorization
+  category ReportCategory
+  severity SeverityLevel
+
+  // Geolocation
+  latitude  Float
+  longitude Float
+
+  // Metadata
+  source     ReportSource @default(VOICE)
+  isResolved Boolean      @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  speechStressData SpeechStressData?
+
+  @@index([category])
+  @@index([severity])
+  @@index([createdAt])
+  @@index([latitude, longitude])
+}
+
+model SpeechStressData {
+  id String @id @default(cuid())
+
+  // Speech metrics
+  wordsPerSecond       Float
+  repeatedWords        Int
+  pauseCount           Int
+  averagePauseDuration Float // in milliseconds
+  confidence           Int // 0-100
+
+  // Stress indicators stored as JSON array
+  stressIndicators String // JSON array of strings
+
+  // Optional relation to Report
+  reportId String? @unique
+  report   Report? @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  // Metadata
+  createdAt DateTime @default(now())
+
+  @@index([reportId])
+  @@index([confidence])
+  @@index([createdAt])
+}
+
+enum SeverityLevel {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum ReportCategory {
+  FIRE
+  MEDICAL
+  CRIME
+  ACCIDENT
+  DISASTER
+  OTHER
+}
+
+enum ReportSource {
+  VOICE
+  MANUAL
+  SENSOR
+  AI
+}
