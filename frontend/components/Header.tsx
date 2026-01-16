@@ -5,10 +5,8 @@ import { usePathname } from "next/navigation"
 
 const links = [
   { name: "Home", href: "/" },
-  { name: "Dashboard", href: "/dashboard" },
-  { name: "Map View", href: "/dashboard/map" },
-  { name: "Reports", href: "/dashboard/reports" },
-  { name: "Analytics", href: "/dashboard/analytics" },
+  { name: "Voice Recogniser", href: "/voice" },
+  { name: "Admin Panel", href: "/dashboard" },
 ]
 
 export default function TopRightHeader() {
