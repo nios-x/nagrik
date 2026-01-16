@@ -4,6 +4,7 @@ import type React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { IconDashboard, IconTable, IconChartBar, IconMap } from "@tabler/icons-react"
+import { ClearAdminDataButton } from "./clear-admin-data-button"
 
 interface NavItem {
   href: string
@@ -81,7 +82,9 @@ export function EmergencySidebar() {
           )
         })}
       </nav>
-
+         <div className="mt-auto pt-4 flex justify-center mb-3 border-t border-white/10">
+        <ClearAdminDataButton />
+      </div>
       <div className="p-4 border-t border-white/10 text-xs text-muted-foreground">
         <div className="flex items-center gap-2 mb-2">
           <div className="w-2 h-2 bg-green-400 rounded-full" />
